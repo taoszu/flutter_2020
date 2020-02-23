@@ -35,8 +35,8 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 themeMode: globalModel.isDarkTheme ? ThemeMode.dark : ThemeMode
                     .light,
-                theme: lightThemeData,
-                darkTheme: darkThemeData,
+                theme: GlobalTheme.lightThemeData,
+                darkTheme: GlobalTheme.darkThemeData,
                 home: MyHomePage(),
                 routes: {"theme_page": (_) => ThemePage()}
             );

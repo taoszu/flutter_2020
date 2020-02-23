@@ -15,7 +15,7 @@ class ThemePage extends BaseStatelessPage {
     final theme = GlobalTheme.theme;
 
     final bgFontColor =
-        globalModel.isDarkTheme ? Color(0X4D000000) : Color(0X4DFFFFFF);
+        globalModel.isDarkTheme ? Color(0X4DFFFFFF) : Color(0X4D000000) ;
 
     return Container(
         color: Colors.white,
@@ -69,7 +69,7 @@ class ThemePage extends BaseStatelessPage {
               children: <Widget>[
                 _labelWidget(label: "文字颜色"),
                 _colorWidget(
-                    text: "主颜色",
+                    text: "主字体颜色",
                     color: theme.primaryFontColor,
                     fontColor: Color(0XFFFFFFFF)),
               ],

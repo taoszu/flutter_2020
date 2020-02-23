@@ -14,11 +14,10 @@ class LightTheme extends BaseTheme {
   Color get primaryFontColor => Color(0XFF272D4D);
 
   @override
-  Color get themeColor => Color(0XFF506DFE);
+  Color get themeColor => Color(0XFF506DF1);
 
   @override
   Color get appBarFontColor => Color(0XFF2F3866);
 
 }
 
-final lightThemeData = BaseTheme.genThemeData(false);
