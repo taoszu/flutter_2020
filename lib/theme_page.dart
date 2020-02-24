@@ -9,13 +9,15 @@ class ThemePage extends BaseStatelessPage {
   @override
   String get appBarTitle => "主题切换页面";
 
+  themeColorsConfig() {
+    addColor("darkFont", light: Color(0X4D000000), dark: Color(0X4DFFFFFF));
+    addColor("lightFont", light: Color(0XFFFFFFFF), dark: Color(0XFFFFFFFF));
+  }
+
   @override
   Widget body(BuildContext context) {
     final globalModel = Provider.of<GlobalModel>(context, listen: false);
     final theme = GlobalTheme.theme;
-
-    final bgFontColor =
-        globalModel.isDarkTheme ? Color(0X4DFFFFFF) : Color(0X4D000000) ;
 
     return Container(
         color: Colors.white,
@@ -41,7 +43,7 @@ class ThemePage extends BaseStatelessPage {
                 _colorWidget(
                     text: "通用背景色",
                     color: theme.appBgColor,
-                    fontColor: bgFontColor)
+                    fontColor: getColor("darkFont"))
               ],
             ),
             Column(
@@ -51,7 +53,7 @@ class ThemePage extends BaseStatelessPage {
                 _colorWidget(
                     text: "通用页面色",
                     color: theme.mainBgColor,
-                    fontColor: bgFontColor)
+                    fontColor: getColor("darkFont"))
               ],
             ),
             Column(
@@ -61,7 +63,7 @@ class ThemePage extends BaseStatelessPage {
                 _colorWidget(
                     text: "主题色",
                     color: theme.themeColor,
-                    fontColor: Color(0XFFFFFFFF)),
+                    fontColor: getColor("lightFont")),
               ],
             ),
             Column(
